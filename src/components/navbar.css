@@ -1,0 +1,11 @@
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.topbar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    list-style-type: none;
+}

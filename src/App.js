@@ -1,5 +1,6 @@
 import Header from './components/header';
 import Content from './components/content';
+import './global.css';
 
 function App() {
   const top = "This data is from Parent component";

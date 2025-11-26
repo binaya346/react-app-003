@@ -1,0 +1,15 @@
+header {
+    background-color: darkslategrey;
+    color: white;
+    padding: 15px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    padding: 0 10px;
+}
