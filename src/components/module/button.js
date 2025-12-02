@@ -1,10 +1,10 @@
 import Styled from './button.module.css';
 
 const Button = (props) => {
-    const {children, onClick} = props;
+  const { type, children, onClick } = props;
 
   return (
-    <button onClick={onClick} className={Styled.btn}>{children}</button>
+    <button type={type} onClick={onClick} className={Styled.btn}>{children}</button>
   );
 };
 

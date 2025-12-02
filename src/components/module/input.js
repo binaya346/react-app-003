@@ -6,7 +6,14 @@ const Input = (props) => {
     return (
         <>
             <label className={Styled.label}>{label}</label>
-            <input className={Styled['input-field']} type={type} placeholder={placeholder} onChange={onChange} name={name} />
+            
+            <input
+                className={Styled['input-field']}
+                type={type}
+                placeholder={placeholder}
+                onChange={onChange}
+                name={name}
+            />
         </>
     );
 };
