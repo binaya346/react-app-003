@@ -1,5 +1,5 @@
 nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -8,4 +8,9 @@ nav ul li a {
     gap: 15px;
     justify-content: center;
     list-style-type: none;
+}
+
+.activeLink{
+    text-decoration: underline;
+    color: blueviolet;
 }

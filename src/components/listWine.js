@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import Styled from "./listWine.module.css";
 
 const ListWine = () => {
@@ -22,7 +23,7 @@ const ListWine = () => {
 
     useEffect(() => {
         getWines();
-    },[]);
+    }, []);
 
     return (
         <>
@@ -31,7 +32,9 @@ const ListWine = () => {
                 {wines.map((wine) => (
                     <div className={Styled.item}>
                         <img src={wine.image} alt="Wine 1" />
-                        <h3>{wine.wine}</h3>
+                        <Link to={`/wines/${wine.id}`}>
+                            <h3>{wine.wine}</h3>
+                        </Link>
                         <div className={Styled.rating}>
                             <span>Average: {wine.rating?.average}</span>
                             <span>Reviews: {wine.rating?.reviews}</span>
