@@ -1,7 +1,7 @@
 import Styled from "./input.module.css";
 
 const Input = (props) => {
-    const { type, placeholder, onChange, label, name } = props;
+    const { type, placeholder, onChange, label, name, value, checked, ...rest } = props;
 
     return (
         <>
@@ -13,6 +13,9 @@ const Input = (props) => {
                 placeholder={placeholder}
                 onChange={onChange}
                 name={name}
+                value={value}
+                checked={checked}
+                {...rest}
             />
         </>
     );
