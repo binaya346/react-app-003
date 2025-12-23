@@ -1,13 +1,12 @@
 import Header from '../components/header'
 
-const Home = () => {
+const Author = () => {
     return (
          <>
             <Header />
-            <h1>Home</h1>
-
+            <h1>Authors</h1>
         </>
     );
 };
 
-export default Home;
+export default Author;

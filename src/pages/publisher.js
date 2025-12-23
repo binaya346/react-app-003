@@ -1,13 +1,13 @@
 import Header from '../components/header'
 
-const Home = () => {
+const Publisher = () => {
     return (
          <>
             <Header />
-            <h1>Home</h1>
+            <h1>Publisher</h1>
 
         </>
     );
 };
 
-export default Home;
+export default Publisher;

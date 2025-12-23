@@ -1,13 +1,13 @@
 import Header from '../components/header'
 
-const Home = () => {
+const Genre = () => {
     return (
-         <>
+        <>
             <Header />
-            <h1>Home</h1>
+            <h1>Genre</h1>
 
         </>
     );
 };
 
-export default Home;
+export default Genre;

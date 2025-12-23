@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "./module/input";
 import Styled from "./form.module.css";
 import Button from "./module/button";
+import BootstrapInput from "./bootstrap/input"
 
 const Form = () => {
     const [state, setState] = useState({ fullName: "", phone: "", password: "", email: "" });
@@ -57,7 +58,7 @@ const Form = () => {
                 method: 'POST', // Specify the HTTP method as POST
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization':"secretkey or token" // Indicate that the request body is JSON
+                    'Authorization': "secretkey or token" // Indicate that the request body is JSON
                 },
                 body: JSON.stringify(state), // Convert the JavaScript object to a JSON string for the body
             });
@@ -80,11 +81,31 @@ const Form = () => {
 
     return (
         <form className={Styled.form}>
-            <Input
+            {/* <Input
                 type="text"
                 placeholder="Enter your name"
                 label="Name:"
                 name="fullName"
+                onChange={handleChange}
+            /> */}
+            <BootstrapInput
+                type="text"
+                placeholder="Enter YOur name"
+                label="Name"
+                name="fullname"
+                onChange={handleChange}
+            />
+
+            <BootstrapInput
+                type="radio"
+                label="Male"
+                name="gender"
+                onChange={handleChange}
+            />
+            <BootstrapInput
+                type="radio"
+                label="Female"
+                name="gender"
                 onChange={handleChange}
             />
 

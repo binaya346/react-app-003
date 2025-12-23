@@ -58,8 +58,12 @@ const Login = () => {
         }
     }
 
-    const onModalClose = () => {
+    const handleConfirmModal = () => {
         navigate('/');
+    }
+
+    const handleCloseModal = () => {
+        setShowModal(false)
     }
 
     return (
@@ -84,7 +88,7 @@ const Login = () => {
                 {error && <p className={styles.error}>{error}</p>}
                 <Button variant="secondary" type="submit" onClick={handleSubmit}>Login</Button>
 
-                {showModal && <Modal title="Success" body="Successfully logged in" close="Ok" onClose={onModalClose} />}
+                {showModal && <Modal show={showModal} title="Success" body="Successfully logged in" save="Ok" onSave={handleConfirmModal} onClose={handleCloseModal} />}
 
             </div>
         </div>

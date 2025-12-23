@@ -2,21 +2,21 @@ import { NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
+    const navitems = [
+        { name: "Home", path: "/" },
+        { name: "Books", path: "/book" },
+        { name: "Authors", path: "/author" },
+        { name: "Publishers", path: "/publisher" },
+        { name: "Genre", path: "/genre" }
+    ]
     return (
         <nav>
             <ul className={styles.topbar}>
-                <li>
-                    <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inActiveLink} to="/">Home</NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inActiveLink} to="/wines">Wines</NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inActiveLink} to="/contact">Contact</NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inActiveLink} to="/form">Form</NavLink>
-                </li>
+                {navitems.map((value, index) => (
+                    <li>
+                        <NavLink key={index} className={({ isActive }) => isActive ? styles.activeLink : styles.inActiveLink} to={value.path}>{value.name}</NavLink>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
