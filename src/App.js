@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/home';
-import Form from './pages/form';
 import './global.css';
 import Login from './pages/login';
 import Register from './pages/register';
@@ -10,6 +9,8 @@ import Author from './pages/author';
 import Publisher from './pages/publisher';
 import Genre from './pages/genre';
 import Book from './pages/book';
+import CreateAuthor from './pages/createAuthor';
+import CreateBook from './pages/createBook';
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/author" element={<Author />} />
+          <Route path="/author/create" element={<CreateAuthor />} />
           <Route path="/book" element={<Book />} />
+          <Route path="/book/create" element={<CreateBook />} />
           <Route path="/genre" element={<Genre />} />
           <Route path="/publisher" element={<Publisher />} />
 

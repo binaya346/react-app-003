@@ -1,0 +1,22 @@
+.card {
+    min-width: 30%;
+}
+
+.bookList {
+    padding: 25px;
+}
+
+.cardGroup {
+    padding: 40px 0;
+}
+
+.bookListTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardImage {
+    max-height: 320px;
+    object-fit: cover;
+}

@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav>
             <ul className={styles.topbar}>
                 {navitems.map((value, index) => (
-                    <li>
+                    <li key={index}>
                         <NavLink key={index} className={({ isActive }) => isActive ? styles.activeLink : styles.inActiveLink} to={value.path}>{value.name}</NavLink>
                     </li>
                 ))}
