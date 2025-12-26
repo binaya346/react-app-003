@@ -11,6 +11,7 @@ import Genre from './pages/genre';
 import Book from './pages/book';
 import CreateAuthor from './pages/createAuthor';
 import CreateBook from './pages/createBook';
+import BookById from './pages/bookById';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/author/create" element={<CreateAuthor />} />
           <Route path="/book" element={<Book />} />
           <Route path="/book/create" element={<CreateBook />} />
+          <Route path="/book/:id" element={<BookById />} />
           <Route path="/genre" element={<Genre />} />
           <Route path="/publisher" element={<Publisher />} />
 

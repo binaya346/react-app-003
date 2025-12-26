@@ -2,10 +2,8 @@ import { useState } from 'react';
 import Input from '../components/module/input'
 import Button from '../components/module/button';
 import styles from './login.module.css';
-import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    const navigate = useNavigate();
 
     const [state, setState] = useState({ email: '', password: '', username: '', firstname: '', lastname: '', phone: '', gender: '', image: null, retypePassword: '' });
     const [error, setError] = useState("");

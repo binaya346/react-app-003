@@ -39,7 +39,9 @@ const BookList = () => {
                     <Card key={index} className={styles.card}>
                         {value.cover_image && <Card.Img variant="top" src={`${process.env.REACT_APP_API_HOST}/uploads/${value.cover_image}`} />}
                         <Card.Body>
-                            <Card.Title>{value.title}</Card.Title>
+                            <Link to={`/book/${value._id}`}>
+                                <Card.Title>{value.title}</Card.Title>
+                            </Link>
                             <Card.Text>
                                 <span> <b>Pages:</b> </span> {value.pages}
                                 <span> <b>Price:</b> </span> {value.price}
