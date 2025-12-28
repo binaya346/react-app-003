@@ -3,10 +3,15 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import styles from '../components/list.module.css'
 import { useParams } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import Header from '../components/header';
+import CreateBook from '../components/createBook';
+import UpdateBook from '../components/updateBook';
 
 const BookById = () => {
     const { id } = useParams();
     const [book, setBook] = useState({});
+    const [isEdit, setIsEdit] = useState(false)
 
     const getBooks = async () => {
         try {
@@ -29,23 +34,28 @@ const BookById = () => {
     }, []);
 
     return (
-        <div className={styles.bookList}>
-            <div className={styles.bookListTitle}>
-                <h1>Books</h1>
+        <>
+            <Header />
+            <div className={styles.bookList}>
+                <div className={styles.bookListTitle}>
+                    <h1>Books</h1>
+                    <Button onClick={() => setIsEdit(!isEdit)}>{isEdit ? "Close Edit" : "Edit"}</Button>
+                </div>
+                <CardGroup className={styles.cardGroup}>
+                    <Card className={styles.card}>
+                        {book.cover_image && <Card.Img className={styles.cardImage} variant="top" src={`${process.env.REACT_APP_API_HOST}/uploads/${book.cover_image}`} />}
+                        <Card.Body>
+                            <Card.Title>{book.title}</Card.Title>
+                            <Card.Text>
+                                <span> <b>Pages:</b> </span> {book.pages}
+                                <span> <b>Price:</b> </span> {book.price}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </CardGroup>
+                {isEdit && <UpdateBook book={book} />}
             </div>
-            <CardGroup className={styles.cardGroup}>
-                <Card className={styles.card}>
-                    {book.cover_image && <Card.Img variant="top" src={`${process.env.REACT_APP_API_HOST}/uploads/${book.cover_image}`} />}
-                    <Card.Body>
-                        <Card.Title>{book.title}</Card.Title>
-                        <Card.Text>
-                            <span> <b>Pages:</b> </span> {book.pages}
-                            <span> <b>Price:</b> </span> {book.price}
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </CardGroup>
-        </div>
+        </>
     )
 }
 

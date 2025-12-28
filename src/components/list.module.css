@@ -19,4 +19,5 @@
 .cardImage {
     max-height: 320px;
     object-fit: cover;
+    max-width: 300px;
 }
