@@ -1,11 +1,17 @@
+import FeaturedBook from '../components/featuredBook';
 import Header from '../components/header'
+import HeroSection from '../components/herosection';
+import LatestAuthors from '../components/latestAuthors';
+import KeyFeatures from '../components/keyFeatures';
 
 const Home = () => {
     return (
-         <>
+        <>
             <Header />
-            <h1>Home</h1>
-
+            <HeroSection />
+            <FeaturedBook />
+            <LatestAuthors />
+            <KeyFeatures />
         </>
     );
 };

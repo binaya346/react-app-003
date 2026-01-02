@@ -1,0 +1,25 @@
+.features-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature-item {
+    text-align: center;
+    width: 30%;
+    padding: 0 15px;
+}
+
+.feature-item svg {
+    color: #3C76C5;
+    font-size: 20px;
+}
+
+.feature-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.feature-item:not(:last-child) {
+    border-right: 2px solid #d9d9d9;
+}

@@ -1,5 +1,5 @@
 nav ul li a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -12,5 +12,4 @@ nav ul li a {
 
 .activeLink{
     text-decoration: underline;
-    color: blueviolet;
 }
